@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Question</title>
+</head>
+<body>
+    <h1>Question:</h1>
+    <p>{{ question_text }}</p>
+    <form method="POST" action="{% url 'quiz:submit_answer' session_id=session_id %}">
+
+        {% csrf_token %}
+        <input type="hidden" name="question_id" value="{{ question_id }}">
+        <div>
+            <label><input type="radio" name="answer" value="A"> A: {{ options.A }}</label>
+        </div>
+        <div>
+            <label><input type="radio" name="answer" value="B"> B: {{ options.B }}</label>
+        </div>
+        <div>
+            <label><input type="radio" name="answer" value="C"> C: {{ options.C }}</label>
+        </div>
+        <div>
+            <label><input type="radio" name="answer" value="D"> D: {{ options.D }}</label>
+        </div>
+        <button type="submit">Submit Answer</button>
+    </form>
+</body>
+</html>
