@@ -82,4 +82,7 @@ This is a simple Django-based web application for a quiz app. The app allows a s
 To run tests for this project:
 ```bash
 python manage.py test
+```
+## License:
+This project is licensed under the MIT License.
 
