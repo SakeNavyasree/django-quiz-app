@@ -83,6 +83,5 @@ To run tests for this project:
 ```bash
 python manage.py test
 ```
-## License:
-This project is licensed under the MIT License.
+
 
