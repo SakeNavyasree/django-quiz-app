@@ -1,5 +1,6 @@
 # django-quiz-app
-This is a simple Django-based web application for a quiz app. The app allows a single user to take a quiz, answer multiple-choice questions, and view results. 
+
+This is a simple Django-based web application for a quiz app. The app allows a single user to take a quiz, answer multiple-choice questions, and view results.
 
 ## Features:
 1. Start a new quiz session.
@@ -21,53 +22,66 @@ This is a simple Django-based web application for a quiz app. The app allows a s
 ## Setup Instructions:
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/SakeNavyasree/django-quiz-app.git
-   cd django-quiz-app
-Set up a virtual environment:
+    ```bash
+    git clone https://github.com/SakeNavyasree/django-quiz-app.git
+    cd django-quiz-app
+    ```
 
 2. Set up a virtual environment:
+    ```bash
     python3 -m venv env
+    ```
 
 3. Activate the virtual environment:
-    On macOS/Linux:
-    source env/bin/activate
-
-    On Windows:
-    env\Scripts\activate
+    - On macOS/Linux:
+      ```bash
+      source env/bin/activate
+      ```
+    - On Windows:
+      ```bash
+      env\Scripts\activate
+      ```
 
 4. Install the required dependencies:
+    ```bash
     pip install -r requirements.txt
+    ```
 
 5. Apply migrations to set up the database:
+    ```bash
     python manage.py migrate
+    ```
 
 6. Create a superuser to manage the admin panel (optional but recommended for testing purposes):
+    ```bash
     python manage.py createsuperuser
+    ```
     Follow the prompts to set the admin username, email, and password.
 
 7. Run the development server:
+    ```bash
     python manage.py runserver
+    ```
 
-8. Access the app at http://127.0.0.1:8000/ in your browser.
+8. Access the app at [http://127.0.0.1:8000/](http://127.0.0.1:8000/) in your browser.
 
-9. Admin Panel (optional): You can access the Django admin panel by navigating to http://127.0.0.1:8000/admin/ and logging in with the superuser credentials you created earlier. Here, you can manage quiz questions, quiz sessions, etc.
+9. **Admin Panel** (optional): You can access the Django admin panel by navigating to [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) and logging in with the superuser credentials you created earlier. Here, you can manage quiz questions, quiz sessions, etc.
 
-# Usage:
-Start Quiz: Visit the homepage and start a new quiz session.
-Answer Questions: A random multiple-choice question will be shown for you to answer.
-View Results: After answering, you can view your score with details on the number of correct and incorrect answers.
+## Usage:
+- **Start Quiz**: Visit the homepage and start a new quiz session.
+- **Answer Questions**: A random multiple-choice question will be shown for you to answer.
+- **View Results**: After answering, you can view your score with details on the number of correct and incorrect answers.
 
-# API Endpoints:
-/start_quiz/: Starts a new quiz session.
-/quiz/<session_id>/: Get a random question for the quiz.
-/quiz/<session_id>/submit/: Submit your answer to a question.
-/quiz/<session_id>/results/: View your quiz results.
+## API Endpoints:
+- `/start_quiz/`: Starts a new quiz session.
+- `/quiz/<session_id>/`: Get a random question for the quiz.
+- `/quiz/<session_id>/submit/`: Submit your answer to a question.
+- `/quiz/<session_id>/results/`: View your quiz results.
 
-# Running Tests:
+## Running Tests:
 To run tests for this project:
-
+```bash
 python manage.py test
 
-# License:
+License:
 This project is licensed under the MIT License.
