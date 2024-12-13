@@ -17,19 +17,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.shortcuts import redirect
+from django.contrib import admin
+from django.urls import path, include
+from django.shortcuts import redirect
+from django.urls import re_path
 
 def redirect_to_quiz(request):
     return redirect('quiz:start_quiz')
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', redirect_to_quiz),
+    re_path(r'^$', redirect_to_quiz),
     path('quiz/', include('quiz_app.urls')),  
 ]
-
-
-
 
 
 
